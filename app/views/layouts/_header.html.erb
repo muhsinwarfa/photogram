@@ -1,0 +1,20 @@
+<nav id = "mainnav">
+  <div id = "nav-header">
+    <div class = "left-side">
+      <%=link_to image_tag("photogram.jpg", class: "photogram"), "#"%>
+      <span id= "logo">Photogram</span>
+    </div>
+    
+    <div class = "middle-side">
+        <input type="search" name="googlesearch" placeholder="Search...">
+    </div>
+    
+    <div class = "right-side">
+        <ul>
+          <li class= "nav-lists"><%= link_to 'New Post', new_post_path, class: "nav-links" %></li>
+          <li class= "nav-lists"><%= link_to "Login","#", class: "nav-links"%></li>
+          <li class= "nav-lists"><%= link_to "Register", "#", class: "nav-links"%></li>
+        </ul>
+    </div>
+  </div>
+</nav>
