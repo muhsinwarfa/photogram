@@ -1,6 +1,11 @@
-<h1>Photogram</h1>
 
-<% @posts.each do |post|%>
-    <%=image_tag post.image.url(:medium) %>
-    <%= post.caption%>
-<%end%>
+<nav id= "index-nav">
+    <div class = "index-wrapper">
+        <% @posts.each do |post|%>
+            <span class = "user-name">Muhsin Khalif</span>
+            <%= link_to image_tag( post.image.url(:medium), class: "responsive-image") %>
+            <p class: "caption"><%= post.caption%></p> 
+        <%end%>
+    </div>
+</nav>
+
