@@ -1,6 +1,6 @@
 <div class = "form-wrapper">
     <%= simple_form_for @post, html: { class: 'form', multipart: true } do |f| %>
-    
+        
         <div class = "inputs">
             <%= f.input :image %>
         </div>
@@ -13,6 +13,7 @@
         <div  class = "inputs">
              <%= f.button :submit, :class => "create" %>
         </div>
+        
        
     <%end%>
 </div>

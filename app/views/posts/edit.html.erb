@@ -1,0 +1,26 @@
+<nav>
+   <div class = "index-wrapper"> 
+    <%=  image_tag( @post.image.url(:medium), class: "responsive-image") %>
+
+    <%= simple_form_for @post, html: { class: 'form', multipart: true } do |f| %>
+        
+        <div class = "inputs">
+            <%= f.input :image %>
+        </div>
+        
+        <div  class = "inputs" > 
+            <%= f.input :caption, :input_html => { :class =>  "caption edit-caption"}, :label => "Caption", :label_html => { :class => "type" } %>
+
+        </div>
+      
+        <div  class = "inputs">
+             <%= f.button :submit, :class => "create" %>
+        </div>
+        
+       
+    <%end%>
+    
+     <br>
+            <%= link_to image_tag("back_arrow.png", class: "backarrow"), posts_path %>
+    </div>
+</nav>

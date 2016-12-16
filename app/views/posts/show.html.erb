@@ -1,0 +1,17 @@
+<nav>
+            
+         <div class = "index-wrapper">
+            <span class = "user-name">Muhsin Khalif</span>
+            <%= link_to image_tag( @post.image.url(:medium), class: "responsive-image") %>
+            <br>
+            <p class: "caption"><%= @post.caption%></p> 
+            <br>
+            <%= link_to image_tag("back_arrow.png", class: "backarrow"), posts_path %>
+            <%= link_to image_tag("edit_icon.png", class: "backarrow"), edit_post_path(@post) %>
+            <%=link_to image_tag("delete_icon.png", class: "backarrow"), post_path(@post), method: :delete,data: { confirm: "Are you sure you want to delete this post?" }%>
+
+          
+         </div>
+         <br>  <br>  <br>
+       
+</nav>
