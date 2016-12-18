@@ -5,11 +5,11 @@
             <%if post.comments %>
                 <%post.comments.each do |comment|%>
                             <!--showing all the comments section-->
-                    <div>
-                        <div><%=comment.user.user_name%></div>
-                         <%=comment.content%>
+                    <div class = "comment-section">
+                        <span class = "user-name"><%=comment.user.user_name%></span>
+                         <p id = "comment-content"><%=comment.content%></p>
                         <% if comment.user == current_user%>
-                            <%=link_to "delete comment", post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" }%>
+                            <%=link_to image_tag("delete_comment.png", class: "backarrow delete-icon"), post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" }%>
                         <%end%>
                     </div>
                 <%end%>
@@ -17,6 +17,6 @@
             <!--comment form for new comment-->
             <div>
                 <%= form_for [post, post.comments.new] do |f| %>
-                    <%=f.text_field :content, placeholder: 'Add a comment...'%>
+                    <%=f.text_field :content,class: "comment-form", placeholder: 'Add a comment...'%>
                 <%end%>
             </div>

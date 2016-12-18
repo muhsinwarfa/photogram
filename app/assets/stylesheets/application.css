@@ -187,6 +187,31 @@ body {
 }
 
 
+/**********comment section*************/
+.comment-form{
+    height: 50px;
+    border:1px solid white;
+    width: 90%;
+    margin: auto;
+    margin-left:20px;
+    border-top-color: #bcc2ca;
+}
 
-
+.comment-section{
+    width:100%;
+    word-wrap: break-word;
+    display: flex;
+    justify-content:space-between;
+}
+#comment-content{
+    margin-right: 166px;
+    height: 100%;
+    width: 100%
+    
+}
+.delete-icon{
+    height: 15px;
+    width: 15px;
+    margin-top:20px;
+}
 
