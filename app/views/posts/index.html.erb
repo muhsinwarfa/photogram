@@ -2,7 +2,7 @@
 <nav id= "index-nav">
     <div class = "index-wrapper">
         <% @posts.each do |post|%>
-            <span class = "user-name">Muhsin Khalif</span>
+            <span class = "user-name"> <%=post.user.user_name%></span>
             <%= link_to image_tag( post.image.url(:medium), class: "responsive-image"), post_path(post) %>
             <p class: "caption"><%= post.caption%></p> 
         <%end%>
