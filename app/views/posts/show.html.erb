@@ -1,11 +1,7 @@
 <nav>
             
          <div class = "index-wrapper">
-            <span class = "user-name"><%=@post.user.user_name%></span>
-            <%= link_to image_tag( @post.image.url(:medium), class: "responsive-image") %>
-            <br>
-            <p class: "caption"><%= @post.caption%></p> 
-            <br>
+            <%= render 'post', post: @post%>
             <%if @post.user.id == current_user.id %>
                   <%= link_to image_tag("back_arrow.png", class: "backarrow"), posts_path %>
                   <%= link_to image_tag("edit_icon.png", class: "backarrow"), edit_post_path(@post) %>
